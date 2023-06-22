@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BEATLab Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                font-family: "Lato", sans-serif
+            }
+
+            .mySlides {
+                display: none
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <!-- <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> -->
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Learn">LEARN <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#about" class="w3-bar-item w3-button">About</a>
+                    <a href="people.html" class="w3-bar-item w3-button">People</a>
+                    <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
+                    <a href="research.html" class="w3-bar-item w3-button">Research Overview</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Connect">CONNECT <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="join.html" class="w3-bar-item w3-button">Join</a>
+                    <a href="participate.html" class="w3-bar-item w3-button">Participate</a>
+                    <a href="donate.html" class="w3-bar-item w3-button">Donate</a>
+                    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+        <a href="#learn" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LEARN</a>
+        <a href="#connect" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONNECT</a>
+        <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:100%;margin-top:128px">
+
+        <!-- Automatic Slideshow Images -->
+        <div class="mySlides w3-display-container w3-center">
+            <img src="images/BL_logo_v5.svg" style="width:70%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <!-- <h3>Los Angeles</h3>
+                <p><b>We had the best time playing at Venice Beach!</b></p> -->
+            </div>
+        </div>
+        <!-- <div class="mySlides w3-display-container w3-center">
+            <img src="https://www.w3schools.com/w3images/ny.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>New York</h3>
+                <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+            </div>
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="https://www.w3schools.com/w3images/chicago.jpg" style="width:100%">
+            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                <h3>Chicago</h3>
+                <p><b>Thank you, Chicago - A night we won't forget.</b></p>
+            </div>
+        </div>  -->
+
+        <!-- The About Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:60%" id="about">
+            <h2 class="w3-wide">ABOUT</h2>
+            <p class="w3-opacity" style="text-align:center"><i>What we do</i></p>
+            <p class="w3-justify">
+                How is it that music moves us and bonds us so deeply? In the BEAT Lab We are interested in the relationship between musical time and bodily time, in connections between music theory and psychology, in computational modeling of attention and motor behavior, in how music synchronizes social groups. At the broadest level, we study musical engagement to learn about fundamental dynamics of the nervous system and, conversely, we use cognitive neuroscientic methods to create more immersive musical experiences. 
+                <a href="research.html" target="_blank"> To learn more about our research click here. </a>
+                <br> <br> 
+            
+       
+                <a href="https://www.mcmaster.ca/" target="_blank"> McMaster University </a> is the perfect home for our research, with amazing facilities and collaborators in the <a href="https://livelab.mcmaster.ca/mcmaster-institute-for-music-the-mind-mimm/" target="_blank">McMaster Institute for Music & the Mind (MIMM)</a>, of which we are a part.
+                We regularly conduct cognitive neuroscience experiments in individual and social contexts. Individual and small group studies (up to 5 people) are conducted in the BEAT Lab. Large group studies, with up to 100 people in a music concert context, are conducted in McMaster's globally unique 
+                <a href="https://livelab.mcmaster.ca/" target="_blank">Large Interactive Virtual Environment (LIVELab)</a>.
+                
+                We also regularly conduct online experiments, which participants can complete from the comfort of their homes. 
+                <a href="participate.html" target="_blank"> If you are interested in participating in our research, please click here. </a>
+
+                <!-- We are particularly interested in 1) using computational models to predict how music will alter listener's attention and subjective experience over time, 
+                2) integrating our understanding of music-induced physiological changes across the nervous system (e.g., by simultaneously measuring activity from the brain, eyes, and heart to understand how these different signals from different nervous subsystems relate to one another), and
+                3) studying how behavioural and physiological dynamics change in social contexts, and whether real-time, adaptive, assistive devices can be used to help people create music together and form social bonds.
+      -->
+            </p>
+            <div class="w3-row" id="people">
+                <div class="w3-third">
+                    <p style="text-align:center">Principal Investigator: <br> Prof. Dr. Lauren Fink</p>
+                    <img src="images/lauren_resized.jpg" class="w3-round w3-margin-bottom" alt="Lauren Fink" style="width:60%">
+                </div>
+                <div class="w3-third">
+                    <p style="text-align:center">PhD Student: <br> Maya Flannery</p>
+                    <!-- TODO bios in pop up tooltip on new page? -->
+                    <img src="images/maya_resized.jpg" class="w3-round w3-margin-bottom" alt="Maya Flannery" style="width:38%">
+                </div>
+                <div class="w3-third">
+                    <p style="text-align:center">PhD Student: <br> Shreshth Saxena</p>
+                    <img src="images/shreshth_resized.jpg" class="w3-round w3-margin-bottom" alt="Shreshth Saxena" style="width:60%">
+                </div>
+            </div>
+
+            <p style="text-align:center"> Interested in joining us? 
+            <a href="join.html" target="_blank"> Click here to learn how. </a> </p>
+        </div>
+
+
+        <!-- The Publications Section -->
+        <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:60%" id="publications">
+            <h2 class="w3-wide">Publications</h2>
+            <p class="w3-opacity w3-center"><i>What we write about</i></p>
+            <p class="w3-justify">
+                Our most recent publications are displayed below. 
+                <a href="publications.html" target="_blank"> Click here to see the full list. </a>
+                <script src="https://bibbase.org/show?bib=https://lkfink.github.io/assets/beatLab_website_publications.bib&jsonp=1&theme=default&showSearch=true&noIndex=true&urlLabel=paper&noTitleLinks=true&titleLinks=false&titleLink=false&folding=1&filter=type:article,year:(202.)"></script> 
+
+            </p>
+            <!-- TODO list recent ones? -->
+
+        </div>
+
+
+
+        <!-- The Events Section -->
+        <div class="w3-black" id="tour">
+            <div class="w3-container w3-content w3-padding-32" style="max-width:60%">
+                <h2 class="w3-wide w3-center">Events</h2>
+                <p class="w3-opacity w3-center" style="color:gray"><i>What we're up to</i></p>
+                <!-- <p class="w3-opacity w3-center"><i>What we're up to</i></p><br> -->
+
+                <div class="w3-row-padding w3-padding-16" style="margin:0 16px">
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="images/telluride_resized.jpg" alt="Telluride" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>Telluride, Colorado</b></p>
+                            <p class="w3-opacity"> 28 Jun - 09 Jul 2023</p>
+                            <p class="w3-opacity" style="text-align: left">Lauren and Shreshth are headed to the mountains for the Telluride Neuromorphic Cognition Engineering Workshop. </p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="window.open('https://sites.google.com/view/telluride-2023/home?authuser=0')">Learn More</button>
+                        </div>
+                    </div>
+                    <!-- <div class="w3-third w3-margin-bottom">
+                        <img src="images/tride.jpg" alt="Montreal" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>Montreal, Canada</b></p>
+                            <p class="w3-opacity"> 17-21 Jul 2023</p>
+                            <p>Shreshth Saxena, PhD student, is attending the CIFAR Deep Learning + Reinforcement Learning Summer School.</p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.location='https://dlrl.ca/'">Learn More</button>
+                        </div>
+                    </div> -->
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="images/germany_resized.jpg" alt="Tübingen" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>Tübingen, Germany</b></p>
+                            <p class="w3-opacity">14-24 Aug 2023</p>
+                            <p class="w3-opacity" style="text-align: left">Shreshth will attend the Systems Vision Science Summer School at the Max Planck Institute for Biological Cybernetics.</p>
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="window.open('https://summerschool.lizhaoping.org/')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <img src="images/tokyo_resized.jpg" alt="Tokyo" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>Tokyo, Japan</b></p>
+                            <p class="w3-opacity">24-26 Aug 2023</p>
+                            <p class="w3-opacity" style="text-align: left";>Lauren, Maya, & Shreshth are presenting at the International Conference on Music Perception & Cognition.</p>
+                            <!-- <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="document.getElementById('ticketModal').style.display='block'">Learn More</button> -->
+                            <button class="w3-button w3-black w3-margin-bottom"
+                                onclick="window.open('https://jsmpc.org/ICMPC17/')">Learn More</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticket Modal -->
+        <div id="ticketModal" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal w3-center w3-padding-32">
+                    <span onclick="document.getElementById('ticketModal').style.display='none'"
+                        class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+                    <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Donate</h2>
+                </header>
+                <div class="w3-container">
+                    <p><label><i class="fa fa-shopping-cart"></i> Donation amount</label></p>
+                    <input class="w3-input w3-border" type="text" placeholder="How many?">
+                    <p><label><i class="fa fa-user"></i> Send Tax-Deductible Recipt To</label></p>
+                    <input class="w3-input w3-border" type="text" placeholder="Enter email">
+                    <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i
+                            class="fa fa-check"></i></button> 
+                            <!-- TODO direct to paypal or something here? -->
+                    <button class="w3-button w3-red w3-section"
+                        onclick="document.getElementById('ticketModal').style.display='none'">Close <i
+                            class="fa fa-remove"></i></button>
+                    <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Contact Section -->
+        <div class="w3-container w3-content w3-padding-64" style="max-width:60%" id="contact">
+            <h2 class="w3-wide w3-center">CONTACT</h2>
+            <!-- <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p> -->
+            <div class="w3-row w3-padding-32">
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <!-- <i class="fa fa-map-marker" style="width:30px"></i> McMaster University is located on the traditional territories of the <a href="https://www.mississauganation.com/" target="_blank"> Mississauga</a> and <a href= "https://www.haudenosauneeconfederacy.com/who-we-are/" target="_blank">Haudenosaunee</a> nations, and within the lands protected by the <a href="https://nandogikendan.com/dish-with-one-spoon/" target="_blank">“Dish with One Spoon”</a> wampum agreement. Non-indigenous BEAT Lab members and vistors should actively consider their place and role in these lands. <br> -->
+                    <i class="fa fa-map-marker" style="width:30px"></i> Hamilton, Ontario, Canada <br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: +1 905-525-9140, ext. 23020<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: finkl1@mcmaster.ca<br>
+                </div>
+                <div class="w3-col m6">
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                        <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- <div class="w3-row w3-padding-32" id="map">
+                <div class="w3-half">
+                    <div class="mapouter"><div class="gmap_canvas"><iframe width="240" height="240" id="gmap_canvas" src="https://maps.google.com/maps?q=McMaster%20University&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:240px;width:240px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:240px;width:240px;}</style>
+                    </div>
+                </div>
+
+                <div class="w3-half">
+                    <p>
+                    McMaster University is located on the traditional territories of the <a href="https://www.mississauganation.com/" target="_blank"> Mississauga</a> and <a href= "https://www.haudenosauneeconfederacy.com/who-we-are/" target="_blank">Haudenosaunee</a> nations, and within the lands protected by the <a href="https://nandogikendan.com/dish-with-one-spoon/" target="_blank">“Dish with One Spoon”</a> wampum agreement. Non-indigenous BEAT Lab members and vistors should actively consider their place and role in these lands.        
+                    </p>
+                </div>  
+            </div>
+        </div> -->
+
+
+        <!-- End Page Content -->
+
+        <!-- TODO insert donate section? -->
+    </div>
+
+    <!-- Image of location/map -->
+    <!-- <img src="images/BL_logo_v5.svg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+        <!-- <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+        <!-- <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+        <a class="w3-button w3-round-xxlarge w3-small w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> -->
+    <!-- Footer end. -->
+    </footer>
+
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

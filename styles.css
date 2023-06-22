@@ -1,0 +1,96 @@
+ /* POSSIBLE COLORS */
+
+:root {
+  /* McMaster color palettes
+  https://brand.mcmaster.ca/element/colour-palette/ */
+    --heritage-maroon: #7A003C;
+    --heritage-gold: #FDBF57;
+    --heritage-grey: #5E6A71;
+
+    --brighter-world-lime: #D2D755;
+    --brighter-world-yellow: #FFD100;
+    --brighter-world-sky-blue: #8BD3E6;
+    --brighter-world-red: #A6192E;
+    --brighter-world-green: #007B4B;
+    --brighter-world-blue: #007096;
+
+    /* Tints / shades */
+    --light-maroon: #ac1455;
+    --dark-maroon: #56002a;
+    --light-grey: #efefef;
+    --cool-grey: #dbdbdd;
+    --medium-grey: #aeb4b8;
+    --dark-grey: #222222;
+}
+
+p, li {
+  /* font-size: 14px;
+  line-height: 1.2;
+  font-family: "Barlow"; */
+  color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.textAccentColor{
+  color: var(--heritage-maroon);
+  background-color: var(--heritage-gold)
+  }
+
+ /* LINKS */
+
+ /* unvisited link */
+/* a:link {
+  color: var(--heritage-gold);
+  text-decoration: none;
+} */
+
+/* visited link */
+/* a:visited {
+  color: var(--heritage-gold);
+  text-decoration: none;
+} */
+
+/* mouse over link */
+a:hover {
+  color: var(--heritage-gold);
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: var(--brighter-world-sky-blue);
+  text-decoration: none;
+}
+
+/* a.special {
+  /* color: var(--heritage-maroon);
+  background-color: var(--heritage-gold); */
+  /* text-decoration: none;
+  /* background-color: var(--brighter-world-green); */
+  /* background-color: var(--heritage-maroon);
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 20px 20px 20px 20px;
+} */ 
+
+
+/* TOGGLE */
+
+toggle-section {
+  display: block;
+  /* color: var(--heritage-gold); */
+}
+
+/*
+Only applies if script runs and
+`role="region"` is added
+*/
+toggle-section[role="region"] {
+  border-width: 2px 0;
+  border-style: solid;
+}
+
+toggle-section[role="region"] + toggle-section {
+  border-top: 0;
+}

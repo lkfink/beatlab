@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BEATLab Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                font-family: "Lato", sans-serif
+            }
+
+            .mySlides {
+                display: none
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <!-- <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> -->
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Learn">LEARN <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#about" class="w3-bar-item w3-button">About</a>
+                    <a href="people.html" class="w3-bar-item w3-button">People</a>
+                    <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
+                    <a href="research" class="w3-bar-item w3-button">Research Overview</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Connect">CONNECT <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="join.html" class="w3-bar-item w3-button">Join</a>
+                    <a href="participate.html" class="w3-bar-item w3-button">Participate</a>
+                    <a href="donate.html" class="w3-bar-item w3-button">Donate</a>
+                    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+        <a href="#learn" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LEARN</a>
+        <a href="#connect" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONNECT</a>
+        <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+        <!-- The People Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:95%" id="about">
+            <h1 class="w3-wide">People</h1>
+            <p class="w3-opacity"><i>Who we are</i></p>
+
+            <div class="w3-row w3-padding-32" id="people">
+                <div class="w3-third">
+                    <p> <strong> Principal Investigator: </strong> <br> Prof. Dr. Lauren Fink</p>
+                    <img src="images/lauren_resized.jpg" class="w3-round w3-margin-bottom" alt="Lauren Fink" style="width:60%" style="border-radius:100%">
+                    <p style="padding: 1em;" style="text-align: justify;" style="text-justify: inter-word;">
+                    I'm an asst. Professor in the Dept. of Psychology, Neuroscience & Behaviour and a member of the McMaster Insitute for Music & the Mind / LIVElab and the School of Computational Science & Engineering. Prior to coming to McMaster and starting the BEAT[Lab], I lived in Germany, California, England, and Ohio. My experience as a percussionist informs many of my research interests. Starting the BEAT[Lab] has been an exciting challenge. I am so grateful to have the opportunity to work with amazing students and collaborators at McMaster and across the globe.
+                    </p>
+                    <p>
+                    <a href="https://lkfink.github.io/assets/fink_cv.pdf" target="_blank">CV</a> |
+                    <a href="https://www.linkedin.com/in/lauren-fink-2ba747109/" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/LaurenFink_PhD" target="_blank">Twitter</a>
+                    </p>
+                </div>
+                <div class="w3-third">
+                    <p> <strong> PhD Student: </strong> <br> Maya Flannery</p>
+                    <!-- TODO bios in pop up tooltip on new page? -->
+                    <img src="images/maya_resized.jpg" class="w3-round w3-margin-bottom" alt="Maya Flannery" style="width:36%" style="height:20%">
+                    <!-- <img src="images/maya_bio.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%"> -->
+                    <p style="padding: 1em;" style="text-align: justify;" style="text-justify: inter-word;"> I am a first year PhD student interested in understanding how and why we like music through individual listening experiences. I have completed a BA and MSc in Psychology, Neuroscience & Behaviour at McMaster University with a specialization in music cognition. Throughout my studies, I have developed a strong interest in Open Science issues and in creating an inclusive and accessible scientific community for everyone. Outside of academia, I am an amateur musician, enjoy being outdoors, and love sci-fi, fantasy and role-playing games.
+                    </p>
+                    <p>
+                    <a href="https://mayabflannery.github.io/" target="_blank">Website</a> |
+                    <a href="https://www.linkedin.com/in/mayabflannery/" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/MayaBFlannery" target="_blank">Twitter</a>
+                    </p>
+
+                </div>
+                <div class="w3-third">
+                    <p> <strong> PhD Student: </strong> <br> Shreshth Saxena</p>
+                    <img src="images/shreshth_resized.jpg" class="w3-round w3-margin-bottom" alt="Shreshth Saxena" style="width:60%">
+                    <!-- <img src="images/shreshth_bio.jpg" class="w3-round" alt="Shreshth Saxena" style="width:60%"> -->
+                    <p style="padding: 1em;" style="text-align: justify;" style="text-justify: inter-word;"> I'm interested in scalable methods of eye-tracking and their application to study audiovisual attention in dynamic real-world, music listening contexts. Prior to my Ph.D., I graduated with a Bachelors and Masters in Computer Science from University of Delhi, India, and gained valuable experience working as a Computer Vision developer in the industry. I'm always excited to discuss accessible technologies, mathematical/programming challenges, retro games and guitar riffs!
+                    </p>
+                    <p>
+                    <a href="https://www.linkedin.com/in/shreshthsaxena" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/shreshth_saxena" target="_blank">Twitter</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- End Page Content -->
+
+        
+    </div>
+
+    <!-- Image of location/map -->
+    <!-- <img src="images/BL_logo_v5.svg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+        <!-- <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+        <!-- <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+        <a class="w3-button w3-round-xxlarge w3-small w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> -->
+    <!-- Footer end. -->
+    </footer>
+
+
+</body>
+
+</html>
