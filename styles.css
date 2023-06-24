@@ -33,8 +33,9 @@ p, li {
 }
 
 .textAccentColor{
-  color: var(--heritage-maroon);
-  background-color: var(--heritage-gold)
+  /* color: var(--heritage-maroon);
+  background-color: var(--heritage-gold) */
+  background-color: var(--cool-grey);
   }
 
  /* LINKS */
@@ -53,7 +54,8 @@ p, li {
 
 /* mouse over link */
 a:hover {
-  color: var(--heritage-gold);
+  /* color: var(--brighter-world-sky-blue); */
+  background-color: var(--cool-grey);
   text-decoration: none;
 }
 

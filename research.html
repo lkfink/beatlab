@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BEATLab Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                font-family: "Lato", sans-serif
+            }
+
+            .mySlides {
+                display: none
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <!-- <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> -->
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Learn">LEARN <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#about" class="w3-bar-item w3-button">About</a>
+                    <a href="people.html" class="w3-bar-item w3-button">People</a>
+                    <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
+                    <a href="research.html" class="w3-bar-item w3-button">Research Overview</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Connect">CONNECT <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="join.html" class="w3-bar-item w3-button">Join</a>
+                    <a href="participate.html" class="w3-bar-item w3-button">Participate</a>
+                    <a href="donate.html" class="w3-bar-item w3-button">Donate</a>
+                    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+        <a href="#learn" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LEARN</a>
+        <a href="#connect" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONNECT</a>
+        <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:100%">
+
+        <!-- The Research Section -->
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:60%" id="about">
+            <h2 class="w3-wide">RESEARCH</h2>
+            <p class="w3-opacity" style="text-align:center"><i>What we do</i></p>
+            <p class="w3-justify">
+                How is it that music moves us and bonds us so deeply? In the BEAT Lab We are interested in the relationship between musical time and bodily time, in connections between music theory and psychology, in computational modeling of attention and motor behavior, in how music synchronizes social groups. At the broadest level, we study musical engagement to learn about fundamental dynamics of the nervous system and, conversely, we use cognitive neuroscientic methods to create more immersive musical experiences. 
+            </p>
+
+            <p>We are particularly interested in:
+                <ul>
+                    <li> studying dynamic attention in social contexts (e.g. multi-person mobile eye-tracking in the concert hall),
+                    <li> using computational models to predict how music will alter listener's attention and subjective experience over time, 
+                    <li> integrating our understanding of music-induced physiological changes across the nervous system (e.g., by simultaneously measuring activity from the brain, eyes, and heart to understand how these different signals from different nervous subsystems relate to one another), 
+                    <li> studying how behavioural and physiological dynamics change in social contexts, and whether real-time, adaptive, assistive devices can be used to help people create music together and form social bonds,
+                    <li> creating more immersive musical experiences with scientific technologies.
+                </ul>
+                <p>
+                Our research is supported by the <a href="https://www.innovation.ca/" target="_blank">Canadian Foundation for Innovation</a> and the <a href="https://www.nserc-crsng.gc.ca/" target="_blank">Natural Sciences and Engineering Research Council of Canada</a>. <br>
+                </p>
+                <br>
+            </p>
+                <!-- TODO insert link to pubs and maybe recent grant titles? -->
+
+            
+            <h3 class="w3-wide" style="text-align:center">Facilities & Equipment</h3>
+            <p class="w3-opacity" style="text-align:center"><i>Where/How we do it</i></p>
+            <p>
+            <span class="textAccentColor"><strong><b>Individual and small group studies</b></strong></span> (up to 5 people) are conducted in the BEAT Lab. In the BEAT Lab, we have a range of state of the art computing and physiological recording hardware. A non-exhaustive list is provided below:
+            <ul>
+                <li> Alienware R15 Desktop with 13th Gen Intel® Core™ i9 13900KF, 24-Core CPU, NVIDIA GeForce RTX™ 4090, 64 GB RAM. For projects requiring heavier power than this machine can offer, we have access to the Advanced Research Computing platform, <a href="https://www.sharcnet.ca/my/front/" target="_blank"> SHARCNET</a>, provided by the Digital Research Alliance of Canada.
+                <li> Mac mini M2 Pro with 12 core CPU, 19-core GPU, 16 core Neural Engine; 32GB unified memory
+                <li> <a href="https://pupil-labs.com/products/neon/" target="_blank"> Pupil Labs' Neon mobile eye-tracking glasses</a>, which record eye data, world audiovisual data, and head motion 
+                <li> <a href="https://www.espruino.com/Bangle.js2" target="_blank"> Bangle.js2 smartwatches</a>, which record cardiac activity, motion, gps, etc. and also have a vibration motor. These watches are open-source and fully customizable. 
+                <li> <a href="https://bela.io/" target="_blank">Bela micro-controllers</a>, which can be used for real-time, embedded audiovisual applications. 
+                <li> <a href="https://www.arduino.cc/" target="_blank">Arduino micro-controllers</a>, which have a variety of potential functions. For example, we conduct group tapping studies using the <a href="https://doi.org/10.3389/fnhum.2022.916551" target="_blank">Groove Enhancement Machine</a>.
+                <li> <a href="https://www.vive.com/ca/product/vive-focus3/specs/" target="_blank">HTC Vive Focus 3</a> virtual reality headset with built-in eye and face-tracking.
+            </ul>
+            </p>
+            <p>
+                Renovated in 2023, the BEAT Lab has fresh lighting, ceilings, floors, and paint. There are six small rooms which can be used for individual offices or experimental testing rooms. One large room acts as a central meeting area with a small kitchenette; second larger room is a communal workspace and music area. Click the slideshow below to view a larger photo gallery.
+            </p>
+
+            <!-- Automatic Slideshow Images TODO slide show of old lab photos? -->
+            <div class="mySlides w3-display-container w3-center">
+                <img src="images/BL_logo_v5.svg" style="width:70%">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                </div>
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="https://www.w3schools.com/w3images/ny.jpg" style="width:100%">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                    <h3>New York</h3>
+                    <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+                </div>
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="https://www.w3schools.com/w3images/chicago.jpg" style="width:100%">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                    <h3>Chicago</h3>
+                    <p><b>Thank you, Chicago - A night we won't forget.</b></p>
+                </div>
+            </div> 
+
+            
+            <p>
+            <br><br>
+            <span class="textAccentColor"><strong><b>Large group studies</b></strong></span>, with up to 100 people in a music concert context, are conducted in McMaster's globally unique 
+            <a href="https://livelab.mcmaster.ca/" target="_blank">Large Interactive Virtual Environment (LIVELab)</a>. In the LIVELab, we have access to: active acoustics that can simulate any environment, electroencephalography (EEG), peripheral physiological recording equipment (e.g., to measure GSR, BVP), Yamaha Disklavier, video wall, KEMAR manikin... <a href="https://livelab.mcmaster.ca/technology-facility/" target="_blank"> [click here to read more]. </a>
+
+            </p>  
+
+
+
+        </div>
+
+
+        <!-- End Page Content -->
+
+    </div>
+
+    <!-- Image of location/map -->
+    <!-- <img src="images/BL_logo_v5.svg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+        <!-- <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+        <!-- <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+        <a class="w3-button w3-round-xxlarge w3-small w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> -->
+    <!-- Footer end. -->
+    </footer>
+
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

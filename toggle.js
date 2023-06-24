@@ -30,8 +30,8 @@
           width: 100%;
         //   padding: 1em 0; 
           padding: 1em 1em; 
-          background: var(--heritage-maroon);
-          color: var(--heritage-gold);
+          background: var(--cool-grey);
+          color: #000000;
 
         }
 
@@ -49,7 +49,7 @@
         }
 
         [aria-expanded] rect {
-          fill: var(--heritage-gold);
+          fill: #000000;
           <!-- currentColor; color of +/- signs -->
         }
       </style>
