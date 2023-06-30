@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>BEATLab Website</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -27,9 +28,6 @@
                 href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
             <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-            <!-- <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-            <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a> -->
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="Learn">LEARN <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -58,7 +56,6 @@
         <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
         <a href="#learn" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LEARN</a>
         <a href="#connect" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONNECT</a>
-        <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a> -->
     </div>
 
     <!-- Page content -->
@@ -68,27 +65,28 @@
         <div class="mySlides w3-display-container w3-center">
             <img src="images/BL_logo_v5.svg" style="width:70%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <!-- <h3>Los Angeles</h3>
-                <p><b>We had the best time playing at Venice Beach!</b></p> -->
+                <!-- <h3>header on image</h3>
+                <p><b>text on image</b></p> -->
             </div>
         </div>
+        <!-- leaving what below in case we ever want to make this a slideshow, instead of static single image -->
         <!-- <div class="mySlides w3-display-container w3-center">
             <img src="https://www.w3schools.com/w3images/ny.jpg" style="width:100%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>New York</h3>
-                <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+                <h3>text</h3>
+                <p><b>lorem ipsum.</b></p>
             </div>
         </div>
         <div class="mySlides w3-display-container w3-center">
             <img src="https://www.w3schools.com/w3images/chicago.jpg" style="width:100%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>Chicago</h3>
-                <p><b>Thank you, Chicago - A night we won't forget.</b></p>
+                <h3>text</h3>
+                <p><b>text</b></p>
             </div>
         </div>  -->
 
         <!-- The About Section -->
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:60%" id="about">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:70%" id="about">
             <h2 class="w3-wide">ABOUT</h2>
             <p class="w3-opacity" style="text-align:center"><i>What we do</i></p>
             <p class="w3-justify">
@@ -104,10 +102,6 @@
                 We also regularly conduct online experiments, which participants can complete from the comfort of their homes. 
                 <a href="participate.html" target="_blank"> If you are interested in participating in our research, please click here. </a>
 
-                <!-- We are particularly interested in 1) using computational models to predict how music will alter listener's attention and subjective experience over time, 
-                2) integrating our understanding of music-induced physiological changes across the nervous system (e.g., by simultaneously measuring activity from the brain, eyes, and heart to understand how these different signals from different nervous subsystems relate to one another), and
-                3) studying how behavioural and physiological dynamics change in social contexts, and whether real-time, adaptive, assistive devices can be used to help people create music together and form social bonds.
-      -->
             </p>
             <div class="w3-row" id="people">
                 <div class="w3-third">
@@ -116,14 +110,17 @@
                 </div>
                 <div class="w3-third">
                     <p style="text-align:center">PhD Student: <br> Maya Flannery</p>
-                    <!-- TODO bios in pop up tooltip on new page? -->
+                    <!-- TODO bios in pop up tooltip? -->
                     <img src="images/maya_resized.jpg" class="w3-round w3-margin-bottom" alt="Maya Flannery" style="width:38%">
                 </div>
                 <div class="w3-third">
                     <p style="text-align:center">PhD Student: <br> Shreshth Saxena</p>
-                    <img src="images/shreshth_resized.jpg" class="w3-round w3-margin-bottom" alt="Shreshth Saxena" style="width:60%">
+                    <img src="images/shreshth_resized_noBG.png" class="w3-round w3-margin-bottom" alt="Shreshth Saxena" style="width:60%">
                 </div>
             </div>
+
+            <p style="text-align:center"> Want to learn more about our lab members?
+            <a href="people.html" target="_blank"> Click here. </a> </p>
 
             <p style="text-align:center"> Interested in joining us? 
             <a href="join.html" target="_blank"> Click here to learn how. </a> </p>
@@ -131,16 +128,15 @@
 
 
         <!-- The Publications Section -->
-        <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:60%" id="publications">
+        <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:70%" id="publications">
             <h2 class="w3-wide">Publications</h2>
             <p class="w3-opacity w3-center"><i>What we write about</i></p>
             <p class="w3-justify">
                 Our most recent publications are displayed below. 
                 <a href="publications.html" target="_blank"> Click here to see the full list. </a>
-                <script src="https://bibbase.org/show?bib=https://lkfink.github.io/assets/beatLab_website_publications.bib&jsonp=1&theme=default&showSearch=true&noIndex=true&urlLabel=paper&noTitleLinks=true&titleLinks=false&titleLink=false&folding=1&filter=type:article,year:(202.)"></script> 
+                <script src="https://bibbase.org/show?bib=https://lkfink.github.io/assets/beatLab_website_publications.bib&jsonp=1&theme=default&showSearch=true&noIndex=true&urlLabel=paper&noTitleLinks=true&titleLinks=false&titleLink=false&folding=1&filter=year:(2021|2022|2023)"></script> 
 
             </p>
-            <!-- TODO list recent ones? -->
 
         </div>
 
@@ -148,56 +144,58 @@
 
         <!-- The Events Section -->
         <div class="w3-black" id="tour">
-            <div class="w3-container w3-content w3-padding-32" style="max-width:60%">
+            <div class="w3-container w3-content w3-padding-32" style="max-width:70%">
                 <h2 class="w3-wide w3-center">Events</h2>
                 <p class="w3-opacity w3-center" style="color:gray"><i>What we're up to</i></p>
-                <!-- <p class="w3-opacity w3-center"><i>What we're up to</i></p><br> -->
 
                 <div class="w3-row-padding w3-padding-16" style="margin:0 16px">
-                    <div class="w3-third w3-margin-bottom">
+
+                    <div class="w3-quarter w3-margin-bottom">
                         <img src="images/telluride_resized.jpg" alt="Telluride" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Telluride, Colorado</b></p>
-                            <p class="w3-opacity"> 28 Jun - 09 Jul 2023</p>
-                            <p class="w3-opacity" style="text-align: left">Lauren and Shreshth are headed to the mountains for the Telluride Neuromorphic Cognition Engineering Workshop. </p>
+                            <p class="w3-opacity" style="text-align: left"> 28 Jun - 09 Jul 2023</p>
+                            <p style="text-align: left">Lauren and Shreshth are headed to the Telluride Neuromorphic Cognition Engineering Workshop. </p>
                             <button class="w3-button w3-black w3-margin-bottom"
                                 onclick="window.open('https://sites.google.com/view/telluride-2023/home?authuser=0')">Learn More</button>
                         </div>
                     </div>
-                    <!-- <div class="w3-third w3-margin-bottom">
-                        <img src="images/tride.jpg" alt="Montreal" style="width:100%" class="w3-hover-opacity">
+
+                    <div class="w3-quarter w3-margin-bottom">
+                        <img src="images/montreal_resized.png" alt="Montreal" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Montreal, Canada</b></p>
                             <p class="w3-opacity"> 17-21 Jul 2023</p>
-                            <p>Shreshth Saxena, PhD student, is attending the CIFAR Deep Learning + Reinforcement Learning Summer School.</p>
+                            <p style="text-align: left">Shreshth is attending the CIFAR Deep Learning + Reinforcement Learning Summer School.</p>
                             <button class="w3-button w3-black w3-margin-bottom"
                                 onclick="document.location='https://dlrl.ca/'">Learn More</button>
                         </div>
-                    </div> -->
-                    <div class="w3-third w3-margin-bottom">
+                    </div>
+
+                    <div class="w3-quarter w3-margin-bottom">
                         <img src="images/germany_resized.jpg" alt="Tübingen" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Tübingen, Germany</b></p>
                             <p class="w3-opacity">14-24 Aug 2023</p>
-                            <p class="w3-opacity" style="text-align: left">Shreshth will attend the Systems Vision Science Summer School at the Max Planck Institute for Biological Cybernetics.</p>
+                            <p style="text-align: left">Shreshth will be at the Max Planck Institute for Biological Cybernetics for the Systems Vision Science Summer School.</p>
                             <button class="w3-button w3-black w3-margin-bottom"
                                 onclick="window.open('https://summerschool.lizhaoping.org/')">Learn More</button>
                         </div>
                     </div>
-                    <div class="w3-third w3-margin-bottom">
+
+                    <div class="w3-quarter w3-margin-bottom">
                         <img src="images/tokyo_resized.jpg" alt="Tokyo" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container w3-white">
                             <p><b>Tokyo, Japan</b></p>
                             <p class="w3-opacity">24-26 Aug 2023</p>
-                            <p class="w3-opacity" style="text-align: left";>Lauren, Maya, & Shreshth are presenting at the International Conference on Music Perception & Cognition.</p>
+                            <p style="text-align: left";>Lauren, Maya, & Shreshth will present at the International Conference on Music Perception & Cognition.</p>
                             <!-- <button class="w3-button w3-black w3-margin-bottom"
                                 onclick="document.getElementById('ticketModal').style.display='block'">Learn More</button> -->
                             <button class="w3-button w3-black w3-margin-bottom"
                                 onclick="window.open('https://jsmpc.org/ICMPC17/')">Learn More</button>
-
-
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -232,11 +230,8 @@
             <!-- <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p> -->
             <div class="w3-row w3-padding-32">
                 <div class="w3-col m6 w3-large w3-margin-bottom" style="padding-right:3px">
-                    <!-- <i class="fa fa-map-marker" style="width:30px"></i> McMaster University is located on the traditional territories of the <a href="https://www.mississauganation.com/" target="_blank"> Mississauga</a> and <a href= "https://www.haudenosauneeconfederacy.com/who-we-are/" target="_blank">Haudenosaunee</a> nations, and within the lands protected by the <a href="https://nandogikendan.com/dish-with-one-spoon/" target="_blank">“Dish with One Spoon”</a> wampum agreement. Non-indigenous BEAT Lab members and vistors should actively consider their place and role in these lands. <br> -->
-                    <!-- <i class="fa fa-map-marker" style="width:30px"></i> Hamilton, Ontario, Canada <br> -->
                     
-                    
-                    <i class="fa fa-map-marker" style="width:30px" style="text-align:right"></i> The BEAT Lab is located on  territories of the <a href="https://www.mississauganation.com/" target="_blank"> Mississauga</a> and <a href= "https://www.haudenosauneeconfederacy.com/who-we-are/" target="_blank">Haudenosaunee</a> nations, and within the lands protected by the <a href="https://nandogikendan.com/dish-with-one-spoon/" target="_blank">“Dish with One Spoon”</a> wampum agreement. <br>
+                    <i class="fa fa-map-marker" style="width:30px" style="text-align:right"></i> The BEAT Lab is located on the traditional territories of the <a href="https://www.mississauganation.com/" target="_blank"> Mississauga</a> and <a href= "https://www.haudenosauneeconfederacy.com/who-we-are/" target="_blank">Haudenosaunee</a> nations, and within the lands protected by the <a href="https://nandogikendan.com/dish-with-one-spoon/" target="_blank">“Dish with One Spoon”</a> wampum agreement. <br>
                     <!-- <i class="fa fa-phone" style="width:30px"></i> Phone: +1 905-525-9140, ext. 23020<br>
                     <i class="fa fa-envelope" style="width:30px"> </i> Email: finkl1@mcmaster.ca<br> -->
                 </div>
@@ -259,40 +254,18 @@
                 </div> -->
             </div>
 
-            <!-- <div class="w3-row w3-padding-32" id="map">
-                <div class="w3-half">
-                    <div class="mapouter"><div class="gmap_canvas"><iframe width="240" height="240" id="gmap_canvas" src="https://maps.google.com/maps?q=McMaster%20University&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:240px;width:240px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:240px;width:240px;}</style>
-                    </div>
-                </div>
-
-                <div class="w3-half">
-                    <p>
-                    McMaster University is located on the traditional territories of the <a href="https://www.mississauganation.com/" target="_blank"> Mississauga</a> and <a href= "https://www.haudenosauneeconfederacy.com/who-we-are/" target="_blank">Haudenosaunee</a> nations, and within the lands protected by the <a href="https://nandogikendan.com/dish-with-one-spoon/" target="_blank">“Dish with One Spoon”</a> wampum agreement. Non-indigenous BEAT Lab members and vistors should actively consider their place and role in these lands.        
-                    </p>
-                </div>  
-            </div>
-        </div> -->
-
 
         <!-- End Page Content -->
 
         <!-- TODO insert donate section? -->
     </div>
 
-    <!-- Image of location/map -->
-    <!-- <img src="images/BL_logo_v5.svg" class="w3-image w3-greyscale-min" style="width:100%"> -->
-
-    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-        <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
-        <!-- <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i> -->
-        <!-- <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-        <a class="w3-button w3-round-xxlarge w3-small w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> -->
-    <!-- Footer end. -->
+    <!-- Footer. -->
+    <footer class="w3-container w3-padding-32 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <a href="contact.html" target="_blank"><i class="fa fa-envelope w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/LaurenFink_PhD" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/lauren-k-fink/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <p class="w3-small" style="text-align:center">&copy; 2023 Lauren Fink</p>
     </footer>
 
     <script>
