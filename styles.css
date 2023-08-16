@@ -1,8 +1,7 @@
- /* POSSIBLE COLORS */
-
-:root {
   /* McMaster color palettes
   https://brand.mcmaster.ca/element/colour-palette/ */
+  
+  :root {
     --heritage-maroon: #7A003C;
     --heritage-gold: #FDBF57;
     --heritage-grey: #5E6A71;
@@ -21,12 +20,13 @@
     --cool-grey: #dbdbdd;
     --medium-grey: #aeb4b8;
     --dark-grey: #222222;
+} 
+
+body {
+   margin: 0px;
 }
 
 p, li {
-  /* font-size: 14px;
-  line-height: 1.2;
-  font-family: "Barlow"; */
   color: #000000;
   text-align: justify;
   text-justify: inter-word;
@@ -65,16 +65,7 @@ a:active {
   text-decoration: none;
 }
 
-/* a.special {
-  /* color: var(--heritage-maroon);
-  background-color: var(--heritage-gold); */
-  /* text-decoration: none;
-  /* background-color: var(--brighter-world-green); */
-  /* background-color: var(--heritage-maroon);
-  border: 0;
-  border-radius: 0.5rem;
-  padding: 20px 20px 20px 20px;
-} */ 
+
 
 
 /* TOGGLE */
@@ -99,11 +90,113 @@ toggle-section[role="region"] + toggle-section {
 
 
 
-/* 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-} */
+
+
+
+
+
+
+
+/* bibbase stuff */
+
+
+#bibbase_header i {
+    width: 16px;
+    text-align: center;
+    margin-right: 0px;
+}
+
+.bibbase_group {
+    /* background-color: #D0D0E0; */
+    background-color: var(--cool-grey);
+    /* mix-blend-mode: luminosity; */
+    font-style: italic;
+    font-size: larger;
+    /* text-shadow: 0px 0px 3px #FFFFFF; */
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px;
+    padding: 5px 40px 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.bibbase_group_body {
+    margin-left: 20px;
+}
+
+
+img.bibbase_icon {
+    /* width: 20px;
+    max-height: 16px; */
+    vertical-align: text-top;
+
+
+    filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: grayscale(100%); /* Current draft standard */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray; /* IE6+ */
+}
+
+img.bibbase_icon:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+
+/* span.bibbase_icon_text { */
+/*     display: none; */
+/* } */
+
+.bibbase_code {
+    width: 80%
+}
+
+.comment {
+    font-size: smaller;
+    font-style: italic;
+    color: gray;
+}
+
+.recommended {
+    color: green;
+}
+
+/* bootstrap */
+
+.bibbase_msg {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+#bibbase_embed_modal {
+    width: 70%;
+    /* left: 15%; */
+    margin: 0;
+}
+
+.bibbase.well {
+    /* margin: 20px; */
+    overflow-wrap: break-word;
+}
+
+.bibbase.link {
+    text-decoration: none;
+}
+
+.bibbase_paper_content {
+    font-size: smaller;
+}
+
+.bibbase_artifact_badge {
+  width: 1.2em;
+  height: 1.2em;
+
+  vertical-align: text-top;
+}

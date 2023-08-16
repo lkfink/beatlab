@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>BEATLab Website</title>
+        <title>BEATLab - Home</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,15 +19,17 @@
             }
         </style>
     </head>
+    
 <body>
 
     <!-- Navbar -->
-    <div class="w3-top">
+    <div class="w3-top" style="max-width:100%">
         <div class="w3-bar w3-black w3-card">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
             <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="Learn">LEARN <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -37,6 +39,7 @@
                     <a href="research.html" class="w3-bar-item w3-button">Research Overview</a>
                 </div>
             </div>
+
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="Connect">CONNECT <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -53,13 +56,13 @@
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="people.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">People</a>
-        <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Publications</a>
-        <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research</a>
-        <a href="join.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Join</a>
-        <a href="participate.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Participate</a>
-        <a href="donate.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Donate</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+        <a href="people.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">People</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Publications</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Research</a>
+        <a href="join.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Join</a>
+        <a href="participate.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Participate</a>
+        <a href="donate.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Donate</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Contact</a>
     </div>
 
     <!-- Page content -->
@@ -94,16 +97,16 @@
             <h2 class="w3-wide">ABOUT</h2>
             <p class="w3-opacity" style="text-align:center"><i>What we do</i></p>
             <p class="w3-justify">
-                How is it that music moves us and bonds us so deeply? In the BEAT Lab We are interested in the relationship between musical time and bodily time, in connections between music theory and psychology, in computational modeling of attention and motor behavior, in how music synchronizes social groups. At the broadest level, we study musical engagement to learn about fundamental dynamics of the nervous system and, conversely, we use cognitive neuroscientic methods to create more immersive musical experiences. 
-                <a href="research.html" target="_blank"> To learn more about our research click here. </a>
+                How is it that music moves us and bonds us so deeply? In the BEAT Lab we are interested in the relationship between musical time and bodily time, in connections between music theory and psychology, in computational modeling of attention and motor behavior, and in how music synchronizes social groups. At the broadest level, we study musical engagement to learn about fundamental dynamics of the nervous system and, conversely, we use cognitive neuroscientific methods to create more immersive musical experiences. 
+                <a href="research.html" target="_blank"> To learn more about our research, click here. </a>
                 <br> <br> 
             
        
                 <a href="https://www.mcmaster.ca/" target="_blank"> McMaster University </a> is the perfect home for our research, with amazing facilities and collaborators in the <a href="https://livelab.mcmaster.ca/mcmaster-institute-for-music-the-mind-mimm/" target="_blank">McMaster Institute for Music & the Mind (MIMM)</a>, of which we are a part.
-                We regularly conduct cognitive neuroscience experiments in individual and social contexts. Individual and small group studies (up to 5 people) are conducted in the BEAT Lab. Large group studies, with up to 100 people in a music concert context, are conducted in McMaster's globally unique 
+                We regularly conduct cognitive neuroscience experiments in both individual and social contexts; individual and small group studies (up to 5 people) are conducted in the BEAT Lab; large group studies--with up to 100 people in a music concert context--are conducted in McMaster's globally unique 
                 <a href="https://livelab.mcmaster.ca/" target="_blank">Large Interactive Virtual Environment (LIVELab)</a>.
                 
-                We also regularly conduct online experiments, which participants can complete from the comfort of their homes. 
+                We also regularly host online experiments, which participants can complete from the comfort of their homes. 
                 <a href="participate.html" target="_blank"> If you are interested in participating in our research, please click here. </a>
 
             </p>
@@ -138,7 +141,7 @@
             <p class="w3-justify">
                 Our most recent publications are displayed below. 
                 <a href="publications.html" target="_blank"> Click here to see the full list. </a>
-                <script src="https://bibbase.org/show?bib=https://lkfink.github.io/assets/beatLab_website_publications.bib&jsonp=1&theme=default&showSearch=true&noIndex=true&urlLabel=paper&noTitleLinks=true&titleLinks=false&titleLink=false&folding=1&filter=year:(2021|2022|2023)"></script> 
+                <script src="https://bibbase.org/show?bib=https://lkfink.github.io/assets/beatLab_website_publications.bib&jsonp=1&theme=default&noIndex=true&urlLabel=paper&noTitleLinks=true&titleLinks=false&titleLink=false&folding=1&filter=year:(2021|2022|2023)"></script> 
 
             </p>
 
@@ -229,7 +232,7 @@
         </div>
 
         <!-- The Contact Section -->
-        <div class="w3-container w3-content w3-padding-64" style="max-width:60%" id="contact">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:70%" id="contact">
             <h2 class="w3-wide w3-center">LOCATION</h2>
             <!-- <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p> -->
             <div class="w3-row w3-padding-32">
@@ -272,6 +275,7 @@
         <p class="w3-small" style="text-align:center">&copy; 2023 Lauren Fink</p>
     </footer>
 
+    <script src="navToggle.js"></script>
     <script>
         // Automatic Slideshow - change image every 4 seconds
         var myIndex = 0;
@@ -289,15 +293,7 @@
             setTimeout(carousel, 4000);
         }
 
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
+
 
         // When the user clicks anywhere outside of the modal, close it
         var modal = document.getElementById('ticketModal');

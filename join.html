@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Join</title>
+        <title>BEATLab - Join</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,22 +21,25 @@
     </head>
 <body>
 
+
     <!-- Navbar -->
-    <div class="w3-top">
+    <div class="w3-top" style="max-width:100%">
         <div class="w3-bar w3-black w3-card">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
             <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="Learn">LEARN <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="index.html#about" class="w3-bar-item w3-button">About</a>
+                    <a href="#about" class="w3-bar-item w3-button">About</a>
                     <a href="people.html" class="w3-bar-item w3-button">People</a>
                     <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
                     <a href="research.html" class="w3-bar-item w3-button">Research Overview</a>
                 </div>
             </div>
+
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-padding-large w3-button" title="Connect">CONNECT <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -53,100 +56,105 @@
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="people.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">People</a>
-        <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Publications</a>
-        <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research</a>
-        <a href="join.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Join</a>
-        <a href="participate.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Participate</a>
-        <a href="donate.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Donate</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+        <a href="people.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">People</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Publications</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Research</a>
+        <a href="join.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Join</a>
+        <a href="participate.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Participate</a>
+        <a href="donate.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Donate</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Contact</a>
+    </div>
+
+    <div class="w3-content" style="max-width:100%; margin-top:92px">
+
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:70%">
+
+            <h1 class="w3-wide" style="text-align:center";>JOIN US!</h1>
+                <p>We are always looking for curious and talented students and postdocs to join the lab! However, our ability to bring on new members is a function of our lab finances and departmental regulations. Interested applicants should be motivated to apply for external funding opportunities. Depending on your career stage and interests, please see the relevant section below.</p>
+
+            <section id="dropdowns">
+
+
+            <toggle-section open="false">
+            <h2 id="UG">Undergraduate students</h2>
+            <div>
+                <p> Undergraduates can be involved in BEAT Lab research in a number of ways, depending on the amount of time, commitment, and independence they would like. Typically, undergraduates conducting research in the lab are compensated in course credit. However, it is possible to attain independent funding for undergraduate research. Please take initiative in looking for and applying to funding opportunities (e.g., the <a href= "https://www.nserc-crsng.gc.ca/students-etudiants/ug-pc/usra-brpc_eng.asp" target="_blank">NSERC undergraduate student research awards</a>).
+                <br></br>
+                <span class="textAccentColor"><strong><b>Independent study students</b></strong></span> can help with data collection and/or work closely with graduate students on their projects.
+                <br></br>
+                <span class="textAccentColor"><strong><b>Bachelor thesis students</b></strong></span>
+                will be expected to complete their own research project from start to finish. The thesis project idea will be discussed extensively with Dr. Fink and BEAT Lab members who will all provide support in helping thesis students to achieve their research goals.
+                </p>
+            </div>
+            </toggle-section>
+
+
+            <toggle-section open="false">
+            <h2 id="GS">Graduate students</h2>
+            <div>
+                <p> Graduate students will ideally apply to McMaster through the <a href="https://science.mcmaster.ca/pnb/"  target="_blank"> Department of Psychology, Neuroscience, and Behaviour (PNB)</a>. The BEAT[Lab] and the <a href="https://livelab.mcmaster.ca/mcmaster-institute-for-music-the-mind-mimm/" target="
+                "> McMaster Institute for Music & the Mind</a> are housed within PNB, so entering through this program often makes logistics and finances much simpler. However, entering through the <a
+                href="https://cse.mcmaster.ca/" target="_blank">School of Computational Science and Engineering (CSE)</a> is also possible, as Dr. Fink is affiliated with CSE.
+
+                <br></br>
+                While the BEAT Lab is happy to take students from any disciplinary background, as long as they demonstrate the skills and motivation necessary for graduate school, please note that McMaster caps the number of international students that can be accepted per year. Lotteries and negotations among faculty members determine which labs can accept international students and when. If you are an international student with your own funding, there is no restriction on your entering of the program.
+
+                <br></br>
+                Graduate students are funded through a combination of support from their lab, the department, and teaching assistantships. Extensive information about the application process, funding, life in Hamilton, etc. can be found in the
+                <a href="https://wikis.mcmaster.ca/mediawiki/pnbgraduatehandbook/index.php/Main_Page" target="_blank">PNB Graduate Handbook</a>. Prospective students should also consider grants/scholarships, which typically pay a higher salary than is possible through the university. For example, students of any nationality are eligible for <a href="https://vanier.gc.ca/en/home-accueil.html" target="_blank"> Vanier Scholarships</a>, which pay $50k/yr for three years, or for the <a href="https://osap.gov.on.ca/OSAPPortal/en/A-ZListofAid/PRDR019245.html" target="_blank"> Ontario Graduate Scholarship Program</a> (award varies by year of study; ~$10-15k/yr).
+
+
+                <br></br>
+                <span class="textAccentColor"><strong><b>If you do not yet have a masters degree</b></strong></span>, you will be expected to complete a masters thesis project. While it is possible to extend the masters directly into the PhD, there are many benefits to fully completing the masters thesis. First, you will have a publishable paper within two years, which will help you in determining whether you want to go on to a PhD and in what topic. Second, you will have the option to apply to PhD programs outside of McMaster, should you realize McMaster is not the best fit. Doing a PhD is a long-term commitment. It is important that the PhD supervisor and supervisee are happy with their supervisory relationship, that the supervisee feels proper support and infrastructure are available, and that the local and lab community provide an ideal living and learning environment for the supervisee. Should both the supervisor and supervisee be sure that continuing on to the PhD is the right direction, it is possible to be promoted from masters to PhD student at the end of the first year of the masters degree. In this case, the masters thesis does not need to be completed and the work will become part of the PhD thesis. 
+
+                <br></br>
+                <span class="textAccentColor"><strong><b>If you already have a masters degree</b></strong></span>, please apply to the PhD program, even if your masters is in a different discipline. Note that a PhD is a long-term, self-driven project, without pretermined goals and deadlines. You will be largely responsible for structuring your own time and research agenda. Your proposed dissertation research should fit within the general interests of the BEAT Lab so that you can receive appropriate support and engage in lively academic exchanges with BEAT Lab members and collaborators.
+                </p>
+            </div>
+            </toggle-section>
+
+            <toggle-section open="false">
+                <h2 id="PD">Postdoctoral researchers</h2>
+                <div>
+                <p> Depending on whether you are international or domestic (already have permanent residency in Canada), funding options will vary. Please get in contact early to discuss project ideas and funding options. Some potential funding sources include:
+                    <li> <a href="https://banting.fellowships-bourses.gc.ca/en/home-accueil.html" target="_blank"> Banting Fellowships</a>: 70k/yr; 2 years, non-renewable; any nationality </li>
+
+                    <li> <a href="https://www.nserc-crsng.gc.ca/students-etudiants/pd-np/pdf-bp_eng.asp" target="_blank"> NSERC Postdoctoral Fellowships</a>: 45k/yr; 2 years, non-renewable; must be Canadian citizen or permanent resident </li>
+
+                    <li> <a href="https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships" target="_blank"> Human Frontier Science Program Fellowships</a>: ~71k/yr + 6k per child + 10k research/travel allowance; 3 years, non-renewable but deferrable; any nationality </li>
+
+                    <li> <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank"> Marie Curie Global Fellowship Program</a>: ~71k/yr + 6k per child + 10k research/travel allowance; 3 years, non-renewable but deferrable; for Europeans only; need co-operating EU institution </li>
+
+                    <li> <a href="https://brancoweissfellowship.org/mission.html" target="_blank"> Branco Weiss Fellowships</a>: CHF 500,000 for up to five years; can choose any host institution; any nationality eligible </li>
+
+                    
+
+                </p>
+                </div>
+            </toggle-section>
+
+            <toggle-section open="false">
+                <h2 id="ST">Short-term research collaborations</h2>
+                <div>
+                <p> There are possibilities for financing short-term research stays via professional developmental and discretionary funds, or pilot project grants. Project scope and content will define funding possibilities. If you are interested in joining us for a short stay, during your sabbatical, or if you've got an idea for a remote collaboration, <a href="contact.html" target="_blank"> please be in contact </a> for further discussion.
+                </p>
+                </div>
+            </toggle-section>
+        </div>
+
     </div>
 
 
-    <div class="w3-content" style="max-width:70%;margin-top:92px">
 
-        <h1 class="w3-wide" style="text-align:center";>JOIN US!</h1>
-            <p>We are always looking for curious and talented students and postdocs to join the lab! However, our ability to bring on new members is a function of our lab finances and departmental regulations. Interested applicants should be motivated to apply for external funding opportunities. Depending on your career stage and interests, please see the relevant section below.</p>
-
-        <section id="dropdowns">
-
-
-        <toggle-section open="false">
-        <h2 id="UG">Undergraduate students</h2>
-        <div>
-            <p> Undergraduates can be involved in BEAT Lab research in a number of ways, depending on the amount of time, commitment, and independence they would like. Typically, undergraduates conducting research in the lab are compensated in course credit. However, it is possible to attain independent funding for undergraduate research. Please take initiative in looking for and applying to funding opportunities (e.g., the <a href= "https://www.nserc-crsng.gc.ca/students-etudiants/ug-pc/usra-brpc_eng.asp" target="_blank">NSERC undergraduate student research awards</a>).
-            <br></br>
-            <span class="textAccentColor"><strong><b>Independent study students</b></strong></span> can help with data collection and/or work closely with graduate students on their projects.
-            <br></br>
-            <span class="textAccentColor"><strong><b>Bachelor thesis students</b></strong></span>
-            will be expected to complete their own research project from start to finish. The thesis project idea will be discussed extensively with Dr. Fink and BEAT Lab members who will all provide support in helping thesis students to achieve their research goals.
-            </p>
-        </div>
-        </toggle-section>
-
-
-        <toggle-section open="false">
-        <h2 id="GS">Graduate students</h2>
-        <div>
-            <p> Graduate students will ideally apply to McMaster through the <a href="https://science.mcmaster.ca/pnb/"  target="_blank"> Department of Psychology, Neuroscience, and Behaviour (PNB)</a>. The BEAT[Lab] and the <a href="https://livelab.mcmaster.ca/mcmaster-institute-for-music-the-mind-mimm/" target="
-            "> McMaster Institute for Music & the Mind</a> are housed within PNB, so entering through this program often makes logistics and finances much simpler. However, entering through the <a
-            href="https://cse.mcmaster.ca/" target="_blank">School of Computational Science and Engineering (CSE)</a> is also possible, as Dr. Fink is affiliated with CSE.
-
-            <br></br>
-            While the BEAT Lab is happy to take students from any disciplinary background, as long as they demonstrate the skills and motivation necessary for graduate school, please note that McMaster caps the number of international students that can be accepted per year. Lotteries and negotations among faculty members determine which labs can accept international students and when. If you are an international student with your own funding, there is no restriction on your entering of the program.
-
-            <br></br>
-            Graduate students are funded through a combination of support from their lab, the department, and teaching assistantships. Extensive information about the application process, funding, life in Hamilton, etc. can be found in the
-            <a href="https://wikis.mcmaster.ca/mediawiki/pnbgraduatehandbook/index.php/Main_Page" target="_blank">PNB Graduate Handbook</a>.
-
-
-            <br></br>
-            <span class="textAccentColor"><strong><b>If you do not yet have a masters degree</b></strong></span>, you will be expected to complete a masters thesis project. While it is possible to extend the masters directly into the PhD, there are many benefits to fully completing the masters thesis. First, you will have a publishable paper within two years, which will help you in determining whether you want to go on to a PhD and in what topic. Second, you will have the option to apply to PhD programs outside of McMaster, should you realize McMaster is not the best fit. Doing a PhD is a long-term commitment. It is important that the PhD supervisor and supervisee are happy with their supervisory relationship, that the supervisee feels proper support and infrastructure are available, and that the local and lab community provide an ideal living and learning environment for the supervisee. Should both the supervisor and supervisee be sure that continuing on to the PhD is the right direction, it is possible to be promoted from masters to PhD student at the end of the first year of the masters degree. In this case, the masters thesis does not need to be completed and the work will become part of the PhD thesis. 
-
-            <br></br>
-            <span class="textAccentColor"><strong><b>If you already have a masters degree</b></strong></span>, please apply to the PhD program, even if your masters is in a different discipline. Note that a PhD is a long-term, self-driven project, without pretermined goals and deadlines. You will be largely responsible for structuring your own time and research agenda. Your proposed dissertation research should fit within the general interests of the BEAT Lab so that you can receive appropriate support and engage in lively academic exchanges with BEAT Lab members and collaborators.
-            </p>
-        </div>
-        </toggle-section>
-
-        <toggle-section open="false">
-            <h2 id="PD">Postdoctoral researchers</h2>
-            <div>
-            <p> Depending on whether you are international or domestic (already have permanent residency in Canada), funding options will vary. Please get in contact early to discuss project ideas and funding options. Some potential funding sources include:
-                <li> <a href="https://banting.fellowships-bourses.gc.ca/en/home-accueil.html" target="_blank"> Banting Fellowships</a>: 70k/yr; 2 years, non-renewable; any nationality </li>
-
-                <li> <a href="https://www.nserc-crsng.gc.ca/students-etudiants/pd-np/pdf-bp_eng.asp" target="_blank"> NSERC Postdoctoral Fellowships</a>: 45k/yr; 2 years, non-renewable; must be Canadian citizen or permanent resident </li>
-
-                <li> <a href="https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships" target="_blank"> Human Frontier Science Program Fellowships</a>: ~71k/yr + 6k per child + 10k research/travel allowance; 3 years, non-renewable but deferrable; any nationality </li>
-
-                <li> <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" target="_blank"> Marie Curie Global Fellowship Program</a>: ~71k/yr + 6k per child + 10k research/travel allowance; 3 years, non-renewable but deferrable; for Europeans only; need co-operating EU institution </li>
-
-                 <li> <a href="https://brancoweissfellowship.org/mission.html" target="_blank"> Branco Weiss Fellowships</a>: CHF 500,000 for up to five years; can choose any host institution; any nationality eligible </li>
-
-                
-
-            </p>
-            </div>
-        </toggle-section>
-
-        <toggle-section open="false">
-            <h2 id="ST">Short-term research collaborations</h2>
-            <div>
-            <p> There are possibilities for financing short-term research stays via professional developmental and discretionary funds, or pilot project grants. Project scope and content will define funding possibilities. If you are interested in joining us for a short stay, during your sabbatical, or if you've got an idea for a remote collaboration, <a href="contact.html" target="_blank"> please be in contact </a> for further discussion.
-            </p>
-            </div>
-        </toggle-section>
-
-    </div>
-
-
-    <script src="toggle.js"></script>
 
     <!-- Footer. -->
     <footer class="w3-container w3-center w3-opacity w3-light-grey">
         <p class="w3-small" style="text-align:center">&copy; 2023 Lauren Fink</p>
         <a href="index.html" target="_blank"> <img src="images/BL_logo_v5.svg" style="width:30%" style="height:30%" style="vertical-align:center"> </a>
     </footer>
+
+    <script src="toggle.js"></script>
+    <script src="navToggle.js"></script>
 
     </body>
 

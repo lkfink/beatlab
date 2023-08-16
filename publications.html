@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Publications</title>
+        <title>BEATLab - Publications</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@
     <div class="w3-top">
         <div class="w3-bar w3-black w3-card">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                href="javascript:void(0)" onclick="navToggle()" title="Toggle Navigation Menu"><i
                     class="fa fa-bars"></i></a>
             <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
             <!-- <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
@@ -44,7 +44,7 @@
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="join.html" class="w3-bar-item w3-button">Join</a>
                     <a href="participate.html" class="w3-bar-item w3-button">Participate</a>
-                    <a href="donate.html class="w3-bar-item w3-button">Donate</a>
+                    <a href="donate.html" class="w3-bar-item w3-button">Donate</a>
                     <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
                 </div>
             </div>
@@ -55,17 +55,17 @@
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="people.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">People</a>
-        <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Publications</a>
-        <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research</a>
-        <a href="join.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Join</a>
-        <a href="participate.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Participate</a>
-        <a href="donate.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Donate</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+        <a href="people.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">People</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Publications</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Research</a>
+        <a href="join.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Join</a>
+        <a href="participate.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Participate</a>
+        <a href="donate.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Donate</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="navToggle()">Contact</a>
     </div>
 
     <!-- Page content -->
-    <!-- <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-content" style="max-width:100%;margin-top:92px">
 
         <!-- Automatic Slideshow Images - Could put publication images here? -->
         <!-- <div class="mySlides w3-display-container w3-center">
@@ -90,10 +90,23 @@
             </div>
         </div>  -->
 
+
+
         <!-- The Publications Section -->
-        <div class="w3-container w3-content w3-center w3-padding-64" style="width:70%" id="about">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="width:70%" id="publications">
             <h1 class="w3-wide">PUBLICATIONS</h1>
             <p class="w3-opacity"><i>Peer-reviewed journal articles and conference proceedings</i></p>
+
+
+            <!-- Automatic Slideshow Images -->
+            <div class="mySlides w3-display-container w3-center">
+                <img src="images/beatlab_wordcloud_lemmatized.png" style="width:100%">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+                    <!-- <h3>header on image</h3>
+                    <p><b>text on image</b></p> -->
+                </div>
+            </div>
+
 
             <p class="w3-justify">
                 
@@ -103,7 +116,7 @@
 
         </div>
 
-
+    </div>
 
         <!-- End Page Content -->
 
@@ -133,15 +146,6 @@
             setTimeout(carousel, 4000);
         }
 
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
 
         // When the user clicks anywhere outside of the modal, close it
         var modal = document.getElementById('ticketModal');
@@ -152,6 +156,7 @@
         }
     </script>
 
+    <script src="navToggle.js"></script>
 
 
 
