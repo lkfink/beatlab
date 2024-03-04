@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+canvas {
+    display: block;
+    margin-bottom: 50px; /* Add some space between canvas elements */
+    padding-left: 10px; /* Add padding to the left side of the canvas */
+}
+
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="number"], input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#plots {
+    margin-top: 40px;
+}
+
+.plot-container {
+    padding-top: 10px; /* Add top padding to create space between the title and the plot */
+}
+
+

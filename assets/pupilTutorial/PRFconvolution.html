@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRF Convolution Sandbox</title>
+    <link rel="stylesheet" href="PRFstyles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>PRF convolution sandbox</h1>
+        <p>Use this tool to explore how different timings and weightings between stimulus impulse events affect the resulting pupil trace. </p>
+        <p>This tool can be useful for making sure you design experiments with enough time between events for the pupil to completely return to baseline (if that is important to you). </p>
+        <p>The impulses are convolved with a pupillary response function (PRF). </p>
+        <p>You can choose to use a PRF that mimics the effect of participants being asked to press a button (motor) or not, by ticking the box below. </p>
+        <h2>Set the parameters below and then click the button to generate plots.</h2>
+
+
+        <label for="impulseIOI">Interval between input impulse events (in ms):</label>
+        <input type="number" id="impulseIOI" value="1000">
+        <br>
+        <label for="weight">Impulse Weighting (every nth impulse):</label>
+        <input type="number" id="weight" value="3">
+        <br>
+        <label for="motor">Use Motor PRF:</label>
+        <input type="checkbox" id="motor">
+        <br>
+        <button id="generateButton">Generate Plot</button>
+
+        <!-- <div id="plots">
+            <h2>Impulse train</h2>
+            <canvas id="impulseCanvas" width="800" height="100"></canvas>
+            <h2>PRF</h2>
+            <canvas id="prfCanvas" width="800" height="100"></canvas>
+            <h2>Predicted pupil data</h2>
+            <canvas id="predPupCanvas" width="800" height="100"></canvas>
+        </div> -->
+
+        <div class="plot-container">
+            <h3>Impulse train</h3>
+            <canvas id="impulseCanvas" width="800" height="100"></canvas>
+        </div>
+        <div class="plot-container">
+            <h3>PRF</h3>
+            <canvas id="prfCanvas" width="800" height="100"></canvas>
+        </div>
+        <div class="plot-container">
+            <h3>Predicted pupil data</h3>
+            <canvas id="predPupCanvas" width="800" height="100"></canvas>
+        </div>
+
+        
+    </div>
+
+    <div id="container">
+        <h2>Play around</h2>
+        <p> Adjust the controls above to build an intuition for convolution. </p>
+        <h4>For example, try the following:</h4>
+        <p>Set the impulse IOI to 1000 and the weight to 2 and motor to 0 (unchecked).</p> 
+        <p>In the resulting predicted pupil data, you can see a clean pupillary response to all input impulses. </p>
+        <p> Now tick the motor box. What happened to the predicted pupil trace?</p>
+        <p>Because the motor PRF takes longer to reach its maximum and return to baseline, the resulting prediction of the pupil data we would record, given this input sequence, is now somewhat smeared across events. </p>
+        <p>Now change the impulse IOI to 600. What do you see?</p>
+        <p>The pupil response to every second event is almost completely overshadowed by the response to the first. There is not enough time between events to measure separate responses.</p> 
+        
+        <h2>Learn more</h2>
+        <p>Check out <a href="https://doi.org/10.3758/s13428-023-02098-1" target="_blank">this paper</a> to learn more about convolution (see section "Pupillary response function"): </p>
+        <p>Fink, L., Simola, J., Tavano, A., Lange, E., Wallot, S., & Laeng, B. (2023). From pre-processing to advanced dynamic modeling of pupil data. <em>Behavior Research Methods</em>, 1-37.</p>
+        
+    </div>
+
+    <script src="PRFsandbox.js"></script>
+</body>
+</html>
+
