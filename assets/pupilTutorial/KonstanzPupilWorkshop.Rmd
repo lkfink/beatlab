@@ -1,0 +1,163 @@
+---
+title: "Konstanz Pupillometry Workshop"
+output: html_notebook
+author: Lauren Fink
+contact: finkl1@mcmaster.ca
+---
+This R Notebook steps through some important aspects of pupillometry data visualization, in the context of condition-averaged responses. 
+
+Developed by Lauren Fink with much external inspiration! 
+
+Explore relevant links: 
+
+> https://www.research.autodesk.com/publications/same-stats-different-graphs/
+> http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html 
+> http://robertgrantstats.co.uk/drawmydata.html 
+> https://cran.r-project.org/web/packages/datasauRus/vignettes/Datasaurus.html 
+
+
+# Install required packages, if not already installed
+The code below checks if each package we need in the list.of.packages variable exists in the user's installed packages. If the user is missing any packages, we install them.  
+```{r}
+# define list of necessary packages
+list.of.packages <- c("dplyr", "here", "ggplot2") 
+
+# define list of packages that will need to be installed
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+
+# insall required packages, if any
+if(length(new.packages)) install.packages(new.packages) 
+```
+
+# Load data
+We use the *here* package so that all file paths are relative. As long as the data .csv file lives in the same directory as the current script you are reading, it will be found. Users should be sure not to change the directory structure of the repository. 
+
+By default, figures will be plotted in line. If the user wants to save the figures to a folder on their local machine, set `op = 1`. Then, all figures will save into the file path defined as `fig_path`.
+```{r}
+# Use the here package to locate this script on the users' machine
+here::i_am("KonstanzPupilWorkshop.Rmd")
+library(here) # establish all filepaths relative to this script
+
+# Read in our data
+df <- read.csv(here("KonstanzWorkshop_pupilData_byCondition.csv")) 
+# df$Y = df$Y + 50
+# df2 <- read.csv(here("dataVisualisation_dataset.csv"))
+# df2 <- df2[!grepl("condition_3", df2$condition), ]
+# df2$condition[df2$condition == "condition_1"] <- "condition_3"
+# df2$y[df2$condition == "condition_4"] <- df2$y[df2$condition == "condition_4"] - 30
+# colnames(df2) <- c("condition", "time", "pupil")
+# df$condition <- "condition_1"
+# colnames(df)[colnames(df) == "X"] <- "time"
+# colnames(df)[colnames(df) == "Y"] <- "pupil"
+# new_df <- rbind(df, df2)
+# df <- new_df
+write.csv(df, file = "KonstanzWorkshop_pupilData_byCondition.csv", row.names = FALSE)
+
+
+# Define file I/O for figures
+# Create an output folder for figures, if it does not already exist in this directory
+fig_path <- here("figures/") # path to save generated figures to
+ifelse(!dir.exists(fig_path), dir.create(fig_path), FALSE) # return FALSE if the directory already exists or can't be created. TRUE if it has been successfully created.
+
+# Define whether to output the plot inline (op=0) or save to file (op=1). 
+# Inline by default
+op = 0 
+```
+
+
+# Print summary stats, by condition, to a table
+Below we output min, max, mean, std. Feel free to add others!
+```{r}
+if(requireNamespace("dplyr")){ # make sure our required package is loaded
+  suppressPackageStartupMessages(library(dplyr))}
+  
+  # specify stats to print
+condstats <-  df %>% 
+    group_by(condition) %>%  # print for each condition separately
+    summarize(
+      min_pupil     = min(pupil), # define stats we care about
+      max_pupil    = max(pupil),
+      mean_pupil    = mean(pupil),
+      std_dev_pupil = sd(pupil),
+    )
+
+condstats # print inline
+```
+
+
+# Plot mean and std of pupil size by condition
+
+#### Define plotting constants
+NOTE: I am randomly choosing 4 color-blind-friendly colors and 4 different marker shapes. That means that those two features will change every time that the plot is generated. To make the color and marker choices constant, I provide an example in the commented code below. 
+```{r}
+# define axis limits
+# Best to set them dynamically in case we might want to use this same code for a different dataset, which might have different limits. Let's find our min and max and round them to the nearest whole number.  
+axisMin =floor(min(df$time, df$pupil)) # min across both our columns of interest
+axisMax = ceiling(max(df$time, df$pupil)) # min across both our columns of interest
+
+# choose a unique, color-blind-friendly color for each condition
+nconds = length(unique(df$condition)) # determin number of conditions
+colorBlindFriendlyPallette = c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") # define color-blind-friendly palette
+ourColors = sample(colorBlindFriendlyPallette, nconds, replace=FALSE) # randomly choose the number of colors we need, without replacement
+
+# The reason for choosing colors dynamically (using nconds) is so that if the number of conditions in our dataset changes, our code will not break. 
+# NOTE. You could set colors manually by doing something like this:
+# cond1 =  "#009E73"
+# cond2 =  "#0072B2"
+# cond3 =  "#D55E00"
+# cond4 =  "#CC79A7"
+# ourColors = c(cond1, cond2, cond3, cond4)
+
+# We can do the same thing for marker shapes
+# Marker shapes are defined by number. See here for the full list of options: https://r-graphics.org/recipe-scatter-shapes
+ourMarkers = sample(1:20, nconds, replace=FALSE)
+
+# Pre-set option
+# ourMarkers = c(17, 1, 5, 8)
+```
+
+### Create bar plot 
+Errors bars represent std dev
+```{r}
+if(requireNamespace("ggplot2")){ # make sure our required package is loaded
+  suppressPackageStartupMessages(library(ggplot2))}
+
+if (op) {png(paste(fig_path, "pupilBarPlot.png", sep=""), units="in", width=11, height=11, res=300)}
+  
+pupilbarplot <- ggplot(condstats, aes(x = condition, fill = condition, y = mean_pupil)) +
+  geom_col(position = "dodge") + 
+  scale_fill_manual(values=ourColors) +
+  geom_errorbar(aes(ymin = mean_pupil - std_dev_pupil, ymax = mean_pupil + std_dev_pupil), position = position_dodge(0.9), width = .2) + labs(fill = "Condition")  
+
+pupilbarplot + xlab("Condition") + ylab("Avg. Pupil Size (au)")
+```
+# Take-aways so far?
+Plenty of pupil papers would only show the results up until this point. But. There is often useful information in the pupil trajectory. Let's plot the pupil trace over time. 
+
+___________________________________________________________________________________
+
+# Plot pupil trace over time, by condition
+
+### Create scatterplot
+```{r}
+# Initialize output file if we want to save the generated figure to file
+if (op) {png(paste(fig_path, "pupilOverTime.png", sep=""), units="in", width=11, height=11, res=300)}
+
+# create plots
+if(requireNamespace("ggplot2")){ # make sure required package is loaded
+  library(ggplot2)}
+
+ggplot(df, aes(x = time, y = pupil, colour=condition, shape=condition))+ 
+    geom_point(size=4) + # create scatter plot
+    scale_colour_manual(values=ourColors) + 
+    scale_shape_manual(values=ourMarkers) + 
+    theme_classic() + 
+    theme(aspect.ratio=1, axis.text = element_text(size = 12), axis.title = element_text(size = 12), strip.text = element_text(size = 12), legend.position = "none") +
+    xlim(axisMin, axisMax) + 
+    ylim(axisMin, axisMax) +
+    facet_wrap(~condition, ncol = 2) # create one scatter plot per condition
+```
+
+
+## Main take-away
+Hopefully, stepping through the exercises above has made you realize the importance of data visualization -- you might not even be looking at real pupil data!!
